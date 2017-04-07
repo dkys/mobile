@@ -1,0 +1,27 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $promotion_goods} -->
+
+<div class="sale_box clearfix" style=" width:1190px;">
+
+<div class="tit"><span>特价商品</span></div>
+
+        <div class="clearfix">
+         <!--{foreach from=$promotion_goods item=goods name="promotion_foreach"}-->
+        
+           <ul class="clearfix">
+           
+                <li class="goodsimg"><a href="{$goods.url}"><img src="{$goods.thumb}" border="0" alt="{$goods.name|escape:html}" class="B_blue"/></a></li>
+                
+			    <li> <p style=" width:202px; white-space:nowrap; text-overflow:ellipsis; overflow:hidden"><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_name|escape:html}</a></p>
+           {$lang.promote_price}<font class="f1">{$goods.promote_price}</font></li>
+           
+           </ul>
+
+         <!--{/foreach}-->
+       </div>
+       
+</div>
+ 
+<div class="blank"></div>
+
+<!-- {/if} -->

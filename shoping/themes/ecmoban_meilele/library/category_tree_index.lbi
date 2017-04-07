@@ -1,0 +1,111 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript">
+          //初始化主菜单
+            function sw_nav2(obj,tag)
+            {
+            var DisSub2 = document.getElementById("DisSub2_"+obj);
+            var HandleLI2= document.getElementById("HandleLI2_"+obj);
+                if(tag==1)
+                {
+                    DisSub2.style.display = "block";
+					HandleLI2.className="current";
+                }
+                else
+                {
+                    DisSub2.style.display = "none";
+					HandleLI2.className="";
+                }
+            }
+</script>
+ 
+    
+    
+  <div id="category_tree">
+  <div class="tit">所有商品分类</div>
+  <div class="nav_tree">
+ 
+                                   <div class="my_left_category my_left_category2 clearfix" style="position: absolute; display:block; z-index:99999999; height:410px;  border-left:1px solid #dddddd">
+
+                                         <div class="category_bg">
+               
+                                                <!--{foreach from=$categories item=cat name=no1}-->
+     
+                                                <dl>
+    
+                           <dt onmouseover="this.className='category_over'" onmouseout="this.className=''">
+     
+                                 <div style="position: relative; width:180px;">
+     
+     
+                                       <a class="a{$smarty.foreach.no1.iteration}" href="{$cat.url}" style=" background:url(images/cat{$smarty.foreach.no1.iteration}.gif) no-repeat; height:18px; float:left; width:192px; padding-left:0px; font-weight:bolder"> 
+                                             <span style="  float:left; line-height:20px; color:#333333">{$cat.name|escape:html}</span><span style=" float:right; color:#dddddd; line-height:20px" >></span>
+                                       </a>
+   
+     
+                                       <div style=" height:44px; line-height:22px; overflow:hidden; width:174px; text-align:left; float:left">
+                                       
+                                               <!--{foreach from=$cat.cat_id item=child name=no}-->
+     <!-- {if $smarty.foreach.no.iteration<9}-->
+      <a id="al1" href="{$child.url}" >{$child.name|escape:html}</a>  
+      <!-- {/if} -->
+     <!--{/foreach}-->
+     
+                                       </div>
+     
+                                 </div>
+ 
+                                 <div class="category_over_box">
+       
+                                        <div style=" height:370px;">
+       
+                                        <ul style=" width:670px; float:left;">
+           
+                                             <!--{foreach from=$cat.cat_id item=child name=no}-->
+                
+                                             <div class="f_l" style=" width:300px; height:100%; overflow:hidden; padding-left:15px; padding-bottom:8px">
+               
+                                                   <li>
+                
+                                                          <div style=" border-bottom:2px solid #333333; padding-bottom:5px; margin-bottom:5px">
+                      
+                                                                   <a class="over_2" style="color:#333333; font-size:14px" href="{$child.url}">{$child.name|escape:html}</a> 
+                              
+                                                          </div>
+     
+                                                          <div style=" height:65px; overflow:hidden; width:300px">
+                      
+                                                                  <!--{foreach from=$child.cat_id item=childer name=no}-->
+                            
+                                <!-- {if $smarty.foreach.no.iteration>1}--><span style=" color:#656565; font-weight:lighter;"> | </span><!-- {/if} --><a class="over_3" href="{$childer.url}" style=" color:#656565; font-size:12px; font-weight:lighter;">{$childer.name|escape:html}</a>
+                             
+                            <!--{/foreach}-->
+                            
+                                                           </div>
+      
+                                                   </li> 
+                
+                                             </div>
+                
+                                             <!--{/foreach}-->
+                
+                                        </ul>
+    
+                                 </div>    
+           
+                                 </div>
+     
+                           </dt>
+     
+                     </dl>
+     
+                                                <!--{/foreach}--> 
+    
+                                         </div>
+    
+                                         
+     
+                                  </div>
+
+                           </div>
+</div>
+<div style=" clear:both"></div>

@@ -1,0 +1,23 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="userMenu">
+    <ul class="nav nav-pills nav-stacked nav-pills-stacked-example">
+        <li role="presentation" {if $action eq 'default'}class="active"{/if}><a href="user.php"><img src="../images/u1.gif"> {$lang.label_welcome}</a></li>
+        <li role="presentation" {if $action eq 'profile'}class="active"{/if}><a href="user.php?act=profile"><img src="../images/u2.gif"> {$lang.label_profile}</a></li>
+        <li {if $action eq 'order_list'|| $action eq 'order_detail'}class="active"{/if}><a href="user.php?act=order_list"><img src="../images/u3.gif"> {$lang.label_order}</a></li>
+        <li {if $action eq 'address_list'}class="active"{/if}><a href="user.php?act=address_list"><img src="../images/u4.gif"> {$lang.label_address}</a></li>
+        <li role="presentation" {if $action eq 'collection_list'}class="active"{/if}><a href="user.php?act=collection_list"><img src="../images/u5.gif"> {$lang.label_collection}</a></li>
+        <li role="presentation" {if $action eq 'message_list'}class="active"{/if}><a href="user.php?act=message_list"><img src="../images/u6.gif"> {$lang.label_message}</a></li>
+        <li {if $action eq 'tag_list'}class="active"{/if}><a href="user.php?act=tag_list"><img src="../images/u7.gif"> {$lang.label_tag}</a></li>
+        <li {if $action eq 'booking_list'}class="active"{/if}><a href="user.php?act=booking_list"><img src="../images/u8.gif"> {$lang.label_booking}</a></li>
+        <li {if $action eq 'bonus'}class="active"{/if}><a href="user.php?act=bonus"><img src="../images/u9.gif"> {$lang.label_bonus}</a></li>
+        <!-- {if $affiliate.on eq 1} --><li {if $action eq 'affiliate'}class="active"{/if}><a href="user.php?act=affiliate"><img src="../images/u10.gif"> {$lang.label_affiliate}</a></li><!-- {/if} -->
+        <li {if $action eq 'comment_list'}class="active"{/if}><a href="user.php?act=comment_list"><img src="../images/u11.gif"> {$lang.label_comment}</a></li>
+        <!--<a href="user.php?act=group_buy">{$lang.label_group_buy}</a>-->
+        <li {if $action eq 'track_packages'}class="active"{/if}><a href="user.php?act=track_packages"><img src="../images/u12.gif"> {$lang.label_track_packages}</a></li>
+        <li {if $action eq 'account_log'}class="active"{/if}><a href="user.php?act=account_log"><img src="../images/u13.gif"> {$lang.label_user_surplus}</a></li>
+        <!--{if $show_transform_points}-->
+        <li {if $action eq 'transform_points'}class="active"{/if}><a href="user.php?act=transform_points"><img src="../images/u14.gif"> {$lang.label_transform_points}</a></li>
+        <!--{/if}-->
+        <li><a href="user.php?act=logout" style="background:none; text-align:right; margin-right:10px;"><img src="../images/bnt_sign.gif"></a></li>
+    </ul>
+</div>
